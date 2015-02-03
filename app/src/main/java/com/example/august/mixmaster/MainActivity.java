@@ -100,39 +100,43 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void onSectionAttached(int number) {
-        final  List<Recipes> drinks = new ArrayList<>();
+        final List<Recipes> drinks = new ArrayList<>();
         TextView textView = (TextView) findViewById(R.id.recipes);
         switch (number) {
             case 1:
-                mTitle = getString(R.string.title_section1);
+                mTitle = getString(R.string.app_name);
                 textView.setText("Common Vodka Recipes");
                 drinks.add(new Recipes( "Screwdriver",  R.drawable.screwdriver, R.drawable.screwdriver_small, getString(R.string.screwdriver_desc), getString(R.string.screwdriver_recipe)));
                 drinks.add(new Recipes( "Fuzzy Navel",  R.drawable.fuzzy_navel, R.drawable.fuzzy_navel_small, getString(R.string.fuzzynavel_desc), getString(R.string.fuzzynavel_recipe)));
                 drinks.add(new Recipes( "Cactus Cooler", R.drawable.cactus_cooler, R.drawable.cactus_cooler_small, getString(R.string.cactuscooler_desc), getString(R.string.cactuscooler_recipe)));
                 break;
             case 2:
-                mTitle = getString(R.string.title_section2) + " recipes";
+                mTitle = getString(R.string.app_name);
                 textView.setText("Common Rum Recipes");
                 drinks.add(new Recipes("Rum and Coke", R.drawable.rum ,R.drawable.rum_small, getString(R.string.rum_coke_desc), getString(R.string.rum_coke_recipe)));
+                drinks.add(new Recipes("Pina Colada", R.drawable.pina, R.drawable.pina_small, getString(R.string.pina_desc), getString(R.string.pina_recipe)));
+                drinks.add(new Recipes("Daiquiri", R.drawable.daiquiri, R.drawable.daiquiri_small, getString(R.string.daiquiri_desc), getString(R.string.daiquiri_recipe)));
                 break;
             case 3:
-                mTitle = getString(R.string.title_section3) + " recipes";
+                mTitle = getString(R.string.app_name);
                 textView.setText("Common Gin Recipes");
                 drinks.add(new Recipes( "Gin and Tonic",  R.drawable.gin_tonic, R.drawable.gin_tonic_small, getString(R.string.gin_tonic_desc), getString(R.string.gin_tonic_recipe)));
+                drinks.add(new Recipes("Martini", R.drawable.martini, R.drawable.martini_small, getString(R.string.martini_desc), getString(R.string.martini_recipe)));
+                drinks.add(new Recipes("Tom Collins", R.drawable.tom_collins, R.drawable.tom_collins_small, getString(R.string.tom_collins_desc), getString(R.string.tom_collins_recipe)));
                 break;
             case 4:
-                mTitle = "Whiskey recipes";
+                mTitle = getString(R.string.app_name);
                 textView.setText("Common Whiskey Recipes");
                 drinks.add(new Recipes("Irish Car Bomb", R.drawable.irish_car_bomb, R.drawable.irish_car_bomb_small, getString(R.string.irishcarbomb_desc), getString(R.string.irishccarbomb_recipe)));
-                drinks.add(new Recipes("Jager Bomb", R.drawable.jager_bomb, R.drawable.jager_bomb_small, getString(R.string.jagerbomb_desc), getString(R.string.jagerbomb_recipe)));
                 break;
             case 5:
-                mTitle = "Tequila recipes";
+                mTitle = getString(R.string.app_name);
                 textView.setText("Common Tequila Recipes");
                 break;
             case 6:
-                mTitle = "Extras";
+                mTitle = getString(R.string.app_name);
                 textView.setText("Extra Recipes");
+                drinks.add(new Recipes("Jager Bomb", R.drawable.jager_bomb, R.drawable.jager_bomb_small, getString(R.string.jagerbomb_desc), getString(R.string.jagerbomb_recipe)));
                 break;
 
         }
@@ -243,6 +247,7 @@ public class MainActivity extends ActionBarActivity
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+
     }
 
 }

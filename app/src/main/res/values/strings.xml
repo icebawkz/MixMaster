@@ -12,6 +12,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+
     <string name="screwdriver_desc">A screwdriver is a popular alcoholic highball drink made with orange juice and vodka.</string>
     <string name="screwdriver_recipe">Mix equal parts Vodka, orange soda, and orange juice. Can also be made with other fruit juices.</string>
     <string name="jagerbomb_desc">The Jägerbomb is a bomb shot mixed drink that involves a shot of Jägermeister and a glass of beer.</string>
@@ -26,5 +27,13 @@
     <string name="irishccarbomb_recipe">Fill a standard bar glass about one-third to one-half with Guiness and then mix equal parts Baileys and Jameson in a shot glass. Drop the shot in and drink while fizzing.</string>
     <string name="rum_coke_desc">A highball made of cola, lime, and dark or light rum.</string>
     <string name="rum_coke_recipe">Mix 1 part rum and 4 parts Coke. Mix and garnish with a slice of lime.</string>
+    <string name="pina_desc">Do you like Pina Coladas? And getting ccaught in the rain?</string>
+    <string name="pina_recipe">Blend together 1.5 ounces coconut cream, 1.5 ounces pineapple juice, 1 ounce rum, 1 ounce coconut rum and garnish with pineapple wedge.</string>
+    <string name="daiquiri_desc">Named after a Cuban iron mine, this drink is a old favorite.</string>
+    <string name="daiquiri_recipe">Shake 1.5 ounces of light rum, .75 ounce of lime juice, and .25 ounce simple syrup together, then pour and enjoy</string>
+    <string name="martini_desc">The names Bond, James Bond.</string>
+    <string name="martini_recipe">Shake or stir 2.5 ounces Gin and .5 ounce dry vermouth then strain into a chilled cocktail glass. Garnish with lemon twist or olive.</string>
+    <string name="tom_collins_desc">Tom Collins???</string>
+    <string name="tom_collins_recipe">In a cocktail shaker mix 2 ounces gin, 1 ounce lemon juice and 1 tsp sugar. Shake and pour into cocktail glass, add 3 ounces club soda and garnish with cherry.</string>
 
 </resources>
