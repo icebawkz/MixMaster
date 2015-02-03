@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mix Master</string>
+    <string name="title_section1">Vodka</string>
+    <string name="title_section2">Rum</string>
+    <string name="title_section3">Gin</string>
+    <string name="title_section4">Whiskey</string>
+    <string name="title_section5">Tequila</string>
+    <string name="title_section6">Extras</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="screwdriver_desc">A screwdriver is a popular alcoholic highball drink made with orange juice and vodka.</string>
+    <string name="screwdriver_recipe">Mix equal parts Vodka, orange soda, and orange juice. Can also be made with other fruit juices.</string>
+    <string name="jagerbomb_desc">The Jägerbomb is a bomb shot mixed drink that involves a shot of Jägermeister and a glass of beer.</string>
+    <string name="jagerbomb_recipe">Fill a standard bar glass about one-third to one-half with beer or Red Bull and then drop a shot of Jager in.</string>
+    <string name="gin_tonic_desc">A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.</string>
+    <string name="gin_tonic_recipe">Mix two parts Gin and three parts tonic water. Garnish with lime and/or lemon to taste.</string>
+    <string name="fuzzynavel_desc">A fuzzy navel is a mixed drink made from peach schnapps and orange juice.</string>
+    <string name="fuzzynavel_recipe">Mix equal parts peach schnapps and orange juice. Garnish with slice of orange</string>
+    <string name="cactuscooler_desc">Cactus Cooler is an orange-pineapple soft drink</string>
+    <string name="cactuscooler_recipe">Fill a shot glass half with triple sec, half mandarin vodka, then drop into a pint glass half-filled with Rockstar energy drink, and serve.</string>
+    <string name="irishcarbomb_desc">An Irish Car Bomb is an American beer cocktail that is drunk as a bomb shot.</string>
+    <string name="irishccarbomb_recipe">Fill a standard bar glass about one-third to one-half with Guiness and then mix equal parts Baileys and Jameson in a shot glass. Drop the shot in and drink while fizzing.</string>
+    <string name="rum_coke_desc">A highball made of cola, lime, and dark or light rum.</string>
+    <string name="rum_coke_recipe">Mix 1 part rum and 4 parts Coke. Mix and garnish with a slice of lime.</string>
+
+</resources>
