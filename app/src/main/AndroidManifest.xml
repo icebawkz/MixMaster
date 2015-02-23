@@ -27,9 +27,6 @@
         </activity>
 
         <receiver android:name=".UserPresentBroadcastReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.USER_PRESENT" />
-            </intent-filter>
         </receiver>
     </application>
 
