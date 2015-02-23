@@ -60,17 +60,10 @@ public class PantryActivity extends ActionBarActivity {
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         }
-    }
 
-    public void onSectionAttached(int number) {
+
+
         //populate list view
-        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-
-        boolean hasGin = preferences.getBoolean("gin", false);
-        if (hasGin) {
-            drinks.add(new Bottles("Gin"));
-        }
-
         final ListView listView = (ListView) findViewById(R.id.listView2);
         listView.setAdapter(new BottleAdapter(this, R.layout.bottle_list, drinks));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -80,13 +73,11 @@ public class PantryActivity extends ActionBarActivity {
 
                 Bottles drink = drinks.get(position);
                 Toast.makeText(PantryActivity.this,
-                        "Removed " +
-
-                                " from your pantry",
+                        "Removed " + drink.getName() + " from your pantry",
                         Toast.LENGTH_SHORT).show();
-                drinks.remove(position);
+
                 preferences.edit().putBoolean(String.valueOf(drink.getName()), false).commit();
-              //  listView.remove(drinks.get(position));
+                drinks.remove(drink);
                 update();
             }
 
@@ -95,6 +86,7 @@ public class PantryActivity extends ActionBarActivity {
         });
 
     }
+
     // get the selected dropdown list value
     public void addListenerOnButton() {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
