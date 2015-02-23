@@ -28,7 +28,6 @@ public class UserPresentBroadcastReceiver extends BroadcastReceiver {
             NotificationManager notificationManager = (NotificationManager) context
                     .getSystemService(Context.NOTIFICATION_SERVICE);
             Notification notification = new Notification(android.R.drawable.stat_notify_more, "What are we drinking today?", System.currentTimeMillis());
-
             Intent notificationIntent = new Intent(context, MainActivity.class);
 
             notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
