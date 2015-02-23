@@ -16,12 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+        <activity android:name=".PantryActivity" >
+           </activity>
+
+    <activity
             android:name=".DetailActivity"
             android:label="Mix Master"
             android:parentActivityName=".MainActivity"
             >
         </activity>
+
         <receiver android:name=".UserPresentBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />

@@ -175,6 +175,8 @@ public class MainActivity extends ActionBarActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(Menu.NONE, 0, 0, "uninstall");
+        menu.add(Menu.NONE, 1, 1, "pantry");
+
         if (!mNavigationDrawerFragment.isDrawerOpen()) {
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
@@ -200,6 +202,10 @@ public class MainActivity extends ActionBarActivity
                 Uri packageURI = Uri.parse("package:com.example.august.mixmaster");
                 Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
                 startActivity(uninstallIntent);
+                return true;
+            case 1:
+                Intent pantry = new Intent(MainActivity.this, PantryActivity.class);
+                startActivity(pantry);
                 return true;
         }
         //noinspection SimplifiableIfStatement
