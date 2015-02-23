@@ -129,28 +129,34 @@ public class MainActivity extends ActionBarActivity
             case 1:
                 mTitle = getString(R.string.app_name);
                 textView.setText("Common Vodka Recipes");
-                drinks.add(new Recipes( "Screwdriver",  R.drawable.screwdriver, R.drawable.screwdriver_small, getString(R.string.screwdriver_desc), getString(R.string.screwdriver_recipe)));
-                drinks.add(new Recipes( "Fuzzy Navel",  R.drawable.fuzzy_navel, R.drawable.fuzzy_navel_small, getString(R.string.fuzzynavel_desc), getString(R.string.fuzzynavel_recipe)));
-                drinks.add(new Recipes( "Cactus Cooler", R.drawable.cactus_cooler, R.drawable.cactus_cooler_small, getString(R.string.cactuscooler_desc), getString(R.string.cactuscooler_recipe)));
+                String[] Vodka = {"Vodka"};
+
+                drinks.add(new Recipes( "Screwdriver",  R.drawable.screwdriver, R.drawable.screwdriver_small, getString(R.string.screwdriver_desc), getString(R.string.screwdriver_recipe),Vodka));
+                drinks.add(new Recipes( "Fuzzy Navel",  R.drawable.fuzzy_navel, R.drawable.fuzzy_navel_small, getString(R.string.fuzzynavel_desc), getString(R.string.fuzzynavel_recipe), Vodka));
+                drinks.add(new Recipes( "Cactus Cooler", R.drawable.cactus_cooler, R.drawable.cactus_cooler_small, getString(R.string.cactuscooler_desc), getString(R.string.cactuscooler_recipe), Vodka));
                 break;
             case 2:
                 mTitle = getString(R.string.app_name);
                 textView.setText("Common Rum Recipes");
-                drinks.add(new Recipes("Rum and Coke", R.drawable.rum ,R.drawable.rum_small, getString(R.string.rum_coke_desc), getString(R.string.rum_coke_recipe)));
-                drinks.add(new Recipes("Pina Colada", R.drawable.pina, R.drawable.pina_small, getString(R.string.pina_desc), getString(R.string.pina_recipe)));
-                drinks.add(new Recipes("Daiquiri", R.drawable.daiquiri, R.drawable.daiquiri_small, getString(R.string.daiquiri_desc), getString(R.string.daiquiri_recipe)));
+                String[] Rum = {"Rum"};
+
+                drinks.add(new Recipes("Rum and Coke", R.drawable.rum ,R.drawable.rum_small, getString(R.string.rum_coke_desc), getString(R.string.rum_coke_recipe), Rum));
+                drinks.add(new Recipes("Pina Colada", R.drawable.pina, R.drawable.pina_small, getString(R.string.pina_desc), getString(R.string.pina_recipe), Rum));
+                drinks.add(new Recipes("Daiquiri", R.drawable.daiquiri, R.drawable.daiquiri_small, getString(R.string.daiquiri_desc), getString(R.string.daiquiri_recipe), Rum));
                 break;
             case 3:
                 mTitle = getString(R.string.app_name);
                 textView.setText("Common Gin Recipes");
-                drinks.add(new Recipes( "Gin and Tonic",  R.drawable.gin_tonic, R.drawable.gin_tonic_small, getString(R.string.gin_tonic_desc), getString(R.string.gin_tonic_recipe)));
-                drinks.add(new Recipes("Martini", R.drawable.martini, R.drawable.martini_small, getString(R.string.martini_desc), getString(R.string.martini_recipe)));
-                drinks.add(new Recipes("Tom Collins", R.drawable.tom_collins, R.drawable.tom_collins_small, getString(R.string.tom_collins_desc), getString(R.string.tom_collins_recipe)));
+                String[] Gin = {"Gin"};
+                drinks.add(new Recipes( "Gin and Tonic",  R.drawable.gin_tonic, R.drawable.gin_tonic_small, getString(R.string.gin_tonic_desc), getString(R.string.gin_tonic_recipe), Gin));
+                drinks.add(new Recipes("Martini", R.drawable.martini, R.drawable.martini_small, getString(R.string.martini_desc), getString(R.string.martini_recipe), Gin));
+                drinks.add(new Recipes("Tom Collins", R.drawable.tom_collins, R.drawable.tom_collins_small, getString(R.string.tom_collins_desc), getString(R.string.tom_collins_recipe), Gin));
                 break;
             case 4:
                 mTitle = getString(R.string.app_name);
                 textView.setText("Common Whiskey Recipes");
-                drinks.add(new Recipes("Irish Car Bomb", R.drawable.irish_car_bomb, R.drawable.irish_car_bomb_small, getString(R.string.irishcarbomb_desc), getString(R.string.irishccarbomb_recipe)));
+                String[] Whiskey = {"Whiskey"};
+                drinks.add(new Recipes("Irish Car Bomb", R.drawable.irish_car_bomb, R.drawable.irish_car_bomb_small, getString(R.string.irishcarbomb_desc), getString(R.string.irishccarbomb_recipe), Whiskey));
                 break;
             case 5:
                 mTitle = getString(R.string.app_name);
@@ -159,7 +165,9 @@ public class MainActivity extends ActionBarActivity
             case 6:
                 mTitle = getString(R.string.app_name);
                 textView.setText("Extra Recipes");
-                drinks.add(new Recipes("Jager Bomb", R.drawable.jager_bomb, R.drawable.jager_bomb_small, getString(R.string.jagerbomb_desc), getString(R.string.jagerbomb_recipe)));
+                String[] Jager = {"Jager"};
+
+                drinks.add(new Recipes("Jager Bomb", R.drawable.jager_bomb, R.drawable.jager_bomb_small, getString(R.string.jagerbomb_desc), getString(R.string.jagerbomb_recipe), Jager));
                 break;
 
         }
@@ -177,6 +185,7 @@ public class MainActivity extends ActionBarActivity
                 intent.putExtra("fileName", drink.getIcon());
                 intent.putExtra("about", drink.getDescription());
                 intent.putExtra("how", drink.getHow());
+                intent.putExtra("ingredients", drink.getIngredients());
 
                 startActivity(intent);
             }

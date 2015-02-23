@@ -9,6 +9,7 @@ public class Recipes {
     private int icon;
     private int small;
     private String how;
+    private String[] ingredients = new String[5];
 /*
     String[] drinks = {
             "Screwdriver",
@@ -35,12 +36,13 @@ public class Recipes {
             R.string.irishcarbomb
     };
 */
-    public Recipes (String name, int icon,int small, String description, String how) {
+    public Recipes (String name, int icon,int small, String description, String how, String[] ingredients) {
         this.name = name;
         this.description = description;
         this.icon = icon;
         this.how = how;
         this.small = small;
+        this.ingredients = ingredients;
     }
 
     public String getName(){return name;}
@@ -48,4 +50,5 @@ public class Recipes {
     public int getIcon() {return icon;}
     public String getHow() {return how;}
     public int getSmall() {return small;}
+    public String[] getIngredients() {return ingredients;}
 }

@@ -5,8 +5,11 @@ package com.example.august.mixmaster;
  */
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,8 +29,10 @@ import org.w3c.dom.Text;
  */
 public class DetailActivity extends ActionBarActivity {
 
+    Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
 
         super.onCreate(savedInstanceState);
@@ -42,6 +47,7 @@ public class DetailActivity extends ActionBarActivity {
             int fileName1 = intent.getIntExtra("fileName", 0);
             String about1 = intent.getStringExtra("about");
             String how = intent.getStringExtra("how");
+            String ingredients[] = intent.getStringArrayExtra("ingredients");
 
             // TODO(ago): Set name and image into the activity_detail layout file.
 
@@ -49,6 +55,18 @@ public class DetailActivity extends ActionBarActivity {
             TextView drinkName = (TextView) findViewById(R.id.namez);
             TextView About = (TextView) findViewById(R.id.about);
             TextView How = (TextView) findViewById(R.id.textView);
+            TextView items = (TextView) findViewById(R.id.items);
+
+            // Find out if they own the ingredients
+            final boolean have = preferences.getBoolean(ingredients[0], false);
+            if (have)
+            {
+                items.setText("You have everything you need to make this.");
+            }
+            else
+            {
+                items.setText("You need to buy "+ingredients[0]+" for this drink.");
+            }
 
             drinkName.setText(name1);
             About.setText(about1);

@@ -59,5 +59,16 @@
         android:layout_below="@+id/about"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/items"
+        android:layout_below="@+id/photo"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff000000"
+        android:background="#46484848"/>
+
 
 </RelativeLayout>

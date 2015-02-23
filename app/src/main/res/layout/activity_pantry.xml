@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="match_parent">
+    android:layout_width="wrap_content" android:layout_height="match_parent" android:background="@drawable/white_wood">
 
     <TextView
         android:layout_width="match_parent"
@@ -36,9 +36,9 @@
         android:entries="@array/pantry_options"/>
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add to pantry"
+        android:text="Add"
         android:id="@+id/button"
         android:layout_alignTop="@+id/spinner"
         android:layout_alignParentRight="true"
@@ -53,7 +53,10 @@
         android:text="Items in your Pantry:"
         android:id="@+id/textView4"
         android:layout_below="@+id/spinner"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff000000"
+        android:background="#46484848"
+        android:gravity="center"/>
 
     <ListView
         android:layout_width="match_parent"
@@ -61,6 +64,8 @@
         android:id="@+id/listView2"
         android:layout_below="@+id/textView4"
         android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_alignEnd="@+id/button"
+        
+        android:gravity="center"/>
 
 </RelativeLayout>
