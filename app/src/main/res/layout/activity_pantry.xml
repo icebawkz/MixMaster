@@ -2,4 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content" android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Pantry"
+        android:id="@+id/textView2"
+        android:textSize="45sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Add alcohol to you pantry by selecting from the dropdown menu, to delete an item simply tap it."
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff000000" />
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/textView3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/spinner"
+        android:layout_toEndOf="@+id/spinner"
+        android:layout_alignBottom="@+id/spinner" />
+
 </RelativeLayout>
