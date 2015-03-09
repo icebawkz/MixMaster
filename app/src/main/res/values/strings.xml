@@ -58,7 +58,8 @@
     <string name="horny_bull_desc">A Mexican screwdriver!</string>
     <string name="horny_bull_recipe">Mix a shot of your favorite tequila with a half glass of Orange juice or other fruit juice.</string>
 
-
+    <string name="tequila_sunrise_desc">The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass .</string>
+    <string name="tequila_sunrise_recipe">1 measure tequila, a half measure  grenadine, and 3/4 of a cup of orange juice. Pour over ice and garnish with sliced orange</string>
 
     <string-array name="pantry_options">
         <item>Red Bull</item>

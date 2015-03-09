@@ -163,7 +163,7 @@ public class MainActivity extends ActionBarActivity
 
                 drinks.add(new Recipes("Irish Car Bomb", R.drawable.irish_car_bomb, R.drawable.irish_car_bomb_small, getString(R.string.irishcarbomb_desc), getString(R.string.irishccarbomb_recipe), carbomb));
                 drinks.add(new Recipes("Whiskey Sour", R.drawable.whiskey_sour, R.drawable.whiskey_sour_small, getString(R.string.whiskey_sour_desc), getString(R.string.whiskey_sour_recipe), Whiskey));
-                drinks.add(new Recipes("Manhattan", R.drawable.manhattan, R.drawable.manhattan_small, getString(R.string.manhattan_desc), getString(R.string.manhattan_desc), manhattan));
+                drinks.add(new Recipes("Manhattan", R.drawable.manhattan, R.drawable.manhattan_small, getString(R.string.manhattan_desc), getString(R.string.manhattan_recipe), manhattan));
                 break;
             case 5:
                 mTitle = getString(R.string.app_name);
@@ -172,6 +172,7 @@ public class MainActivity extends ActionBarActivity
 
                 drinks.add(new Recipes("Margarita", R.drawable.margarita, R.drawable.margarita_small, getString(R.string.margarita_desc), getString(R.string.margarita_recipe), Margarita));
                 drinks.add(new Recipes("Horny Bull", R.drawable.horny_bull, R.drawable.horny_bull_small, getString(R.string.horny_bull_desc), getString(R.string.horny_bull_recipe), Margarita));
+                drinks.add(new Recipes("Tequila Sunrise", R.drawable.tequila_sunrise, R.drawable.tequila_sunrise_small, getString(R.string.tequila_sunrise_desc), getString(R.string.tequila_sunrise_recipe), Margarita));
                 break;
             case 6:
                 mTitle = getString(R.string.app_name);
@@ -179,6 +180,7 @@ public class MainActivity extends ActionBarActivity
                 String[] Jager = {"Jager"};
 
                 drinks.add(new Recipes("Jager Bomb", R.drawable.jager_bomb, R.drawable.jager_bomb_small, getString(R.string.jagerbomb_desc), getString(R.string.jagerbomb_recipe), Jager));
+                //extras
                 break;
 
         }
