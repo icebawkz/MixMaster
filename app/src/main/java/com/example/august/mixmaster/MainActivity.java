@@ -148,24 +148,30 @@ public class MainActivity extends ActionBarActivity
                 mTitle = getString(R.string.app_name);
                 textView.setText("Common Gin Recipes");
                 String[] Gin = {"Gin"};
+                String[] martini = {"Gin", "Vermouth"};
 
                 drinks.add(new Recipes( "Gin and Tonic",  R.drawable.gin_tonic, R.drawable.gin_tonic_small, getString(R.string.gin_tonic_desc), getString(R.string.gin_tonic_recipe), Gin));
-                drinks.add(new Recipes("Martini", R.drawable.martini, R.drawable.martini_small, getString(R.string.martini_desc), getString(R.string.martini_recipe), Gin));
+                drinks.add(new Recipes("Martini", R.drawable.martini, R.drawable.martini_small, getString(R.string.martini_desc), getString(R.string.martini_recipe), martini));
                 drinks.add(new Recipes("Tom Collins", R.drawable.tom_collins, R.drawable.tom_collins_small, getString(R.string.tom_collins_desc), getString(R.string.tom_collins_recipe), Gin));
                 break;
             case 4:
                 mTitle = getString(R.string.app_name);
                 textView.setText("Common Whiskey Recipes");
                 String[] Whiskey = {"Whiskey"};
-                drinks.add(new Recipes("Irish Car Bomb", R.drawable.irish_car_bomb, R.drawable.irish_car_bomb_small, getString(R.string.irishcarbomb_desc), getString(R.string.irishccarbomb_recipe), Whiskey));
-                //drinks.add(new Recipes())
+                String[] manhattan = {"Whiskey", "Vermouth"};
+                String[] carbomb = {"Whiskey", "Jameson"};
+
+                drinks.add(new Recipes("Irish Car Bomb", R.drawable.irish_car_bomb, R.drawable.irish_car_bomb_small, getString(R.string.irishcarbomb_desc), getString(R.string.irishccarbomb_recipe), carbomb));
+                drinks.add(new Recipes("Whiskey Sour", R.drawable.whiskey_sour, R.drawable.whiskey_sour_small, getString(R.string.whiskey_sour_desc), getString(R.string.whiskey_sour_recipe), Whiskey));
+                drinks.add(new Recipes("Manhattan", R.drawable.manhattan, R.drawable.manhattan_small, getString(R.string.manhattan_desc), getString(R.string.manhattan_desc), manhattan));
                 break;
             case 5:
                 mTitle = getString(R.string.app_name);
                 textView.setText("Common Tequila Recipes");
-                String[] Margarita = {"Margarita"};
-                drinks.add(new Recipes("Margarita", R.drawable.margarita, R.drawable.margarita_small, getString(R.string.margarita_desc), getString(R.string.margarita_recipe), Margarita));
+                String[] Margarita = {"Tequila"};
 
+                drinks.add(new Recipes("Margarita", R.drawable.margarita, R.drawable.margarita_small, getString(R.string.margarita_desc), getString(R.string.margarita_recipe), Margarita));
+                drinks.add(new Recipes("Horny Bull", R.drawable.horny_bull, R.drawable.horny_bull_small, getString(R.string.horny_bull_desc), getString(R.string.horny_bull_recipe), Margarita));
                 break;
             case 6:
                 mTitle = getString(R.string.app_name);
@@ -209,8 +215,8 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add(Menu.NONE, 0, 0, "uninstall");
-        menu.add(Menu.NONE, 1, 1, "pantry");
+        menu.add(Menu.NONE, 0, 0, "Uninstall");
+        menu.add(Menu.NONE, 1, 1, "Pantry");
 
         if (!mNavigationDrawerFragment.isDrawerOpen()) {
             // Only show items in the action bar relevant to this screen

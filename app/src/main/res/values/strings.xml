@@ -34,26 +34,34 @@
     <string name="rum_coke_desc">A highball made of cola, lime, and dark or light rum.</string>
     <string name="rum_coke_recipe">Mix 1 part rum and 4 parts Coke. Mix and garnish with a slice of lime.</string>
 
-    <string name="pina_desc">Do you like Pina Coladas? And getting ccaught in the rain?</string>
+    <string name="pina_desc">Do you like Pina Coladas? And getting caught in the rain?</string>
     <string name="pina_recipe">Blend together 1.5 ounces coconut cream, 1.5 ounces pineapple juice, 1 ounce rum, 1 ounce coconut rum and garnish with pineapple wedge.</string>
 
-    <string name="daiquiri_desc">Named after a Cuban iron mine, this drink is a old favorite.</string>
+    <string name="daiquiri_desc">Named after a Cuban iron mine, this drink is an old favorite.</string>
     <string name="daiquiri_recipe">Shake 1.5 ounces of light rum, .75 ounce of lime juice, and .25 ounce simple syrup together, then pour and enjoy</string>
 
-    <string name="martini_desc">The names Bond, James Bond.</string>
+    <string name="martini_desc">The name\'s Bond, James Bond.</string>
     <string name="martini_recipe">Shake or stir 2.5 ounces Gin and .5 ounce dry vermouth then strain into a chilled cocktail glass. Garnish with lemon twist or olive.</string>
 
-    <string name="tom_collins_desc">Tom Collins???</string>
-    <string name="tom_collins_recipe">In a cocktail shaker mix 2 ounces gin, 1 ounce lemon juice and 1 tsp sugar. Shake and pour into cocktail glass, add 3 ounces club soda and garnish with cherry.</string>
+    <string name="tom_collins_desc">The Tom Collins is a Collins cocktail made from gin, lemon juice, sugar and carbonated water</string>
+    <string name="tom_collins_recipe">In a cocktail shaker mix 2 ounces gin, 1 ounce lemon juice and 1 tsp sugar. Shake and pour into cocktail glass, add 3 ounces club soda and garnish with lemon.</string>
 
     <string name="margarita_desc">The margarita is a cocktail consisting of tequila, triple sec and lime or lemon juice, often served with salt on the rim of the glass.</string>
     <string name="margarita_recipe">Mix 7 parts Tequila, 4 parts Triple Sec (orange Liquer), and 3 parts Lime juice.</string>
 
+    <string name="whiskey_sour_desc">The whiskey sour is a mixed drink containing whiskey, lemon juice, sugar, and optionally, a dash of egg white. </string>
+    <string name="whiskey_sour_recipe">Mix two parts fresh lemon juice and 3 parts Whiskey, pour over ice and serve chilled.</string>
+
+    <string name="manhattan_desc">A Manhattan is a cocktail made with whiskey, sweet vermouth, and bitters.</string>
+    <string name="manhattan_recipe">Pour 9 parts Bourbon, 4 parts vermouth, a dash of bitters, and an orange peel, in a shaker with ice cubes and stir well. Strain into a chilled cocktail glass. Garnish with a cherry.</string>
+
+    <string name="horny_bull_desc">A Mexican screwdriver!</string>
+    <string name="horny_bull_recipe">Mix a shot of your favorite tequila with a half glass of Orange juice or other fruit juice.</string>
 
 
 
     <string-array name="pantry_options">
-        <item>Reb Bull</item>
+        <item>Red Bull</item>
         <item>Triple Sec</item>
         <item>Bailey\'s</item>
         <item>Jameson</item>

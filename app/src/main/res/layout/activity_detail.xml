@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:padding="4dp"
         android:id="@+id/namez"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:text="NAME"
         android:ellipsize="start"
         android:gravity="center"
@@ -64,6 +64,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
         android:id="@+id/items"
+        android:ellipsize="start"
+        android:gravity="center"
         android:layout_below="@+id/photo"
         android:layout_centerHorizontal="true"
         android:textColor="#727272" />

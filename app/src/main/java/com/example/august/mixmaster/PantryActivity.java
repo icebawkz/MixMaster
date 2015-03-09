@@ -28,6 +28,8 @@ public class PantryActivity extends ActionBarActivity {
     private Button btnSubmit;
     final Context context = this;
 
+
+
     //set up shared preferences data
 
     @Override
@@ -44,7 +46,7 @@ public class PantryActivity extends ActionBarActivity {
         builder.setMessage("This is where we can keep track of what ingredients you have on hand, that way, we can tell you what drinks you can mix!")
                 .setPositiveButton("got it", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        preferences.edit().putBoolean("firstpantry", false).commit();
+                        preferences.edit().putBoolean("firstpantry", false).apply();
                         dialog.cancel();
                     }
                 })
@@ -76,7 +78,7 @@ public class PantryActivity extends ActionBarActivity {
                         "Removed " + drink.getName() + " from your pantry",
                         Toast.LENGTH_SHORT).show();
 
-                preferences.edit().putBoolean(String.valueOf(drink.getName()), false).commit();
+                preferences.edit().putBoolean(String.valueOf(drink.getName()), false).apply();
                 drinks.remove(drink);
                 update();
             }
@@ -103,7 +105,7 @@ public class PantryActivity extends ActionBarActivity {
                                  String.valueOf(spinner1.getSelectedItem()) +
                                 " to your pantry",
                         Toast.LENGTH_SHORT).show();
-                preferences.edit().putBoolean(String.valueOf(spinner1.getSelectedItem()), true).commit();
+                preferences.edit().putBoolean(String.valueOf(spinner1.getSelectedItem()), true).apply();
                 update();
 
 
@@ -116,6 +118,13 @@ public class PantryActivity extends ActionBarActivity {
 
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         BottleAdapter adapt = new BottleAdapter(this, R.layout.bottle_list, drinks);
+
+
+        ListView listView = (ListView) findViewById(R.id.listView2);
+        adapt.clear();
+        adapt.notifyDataSetChanged();
+        listView.setAdapter(null);
+
         final boolean gin = preferences.getBoolean("Gin", false);
         final boolean vodka = preferences.getBoolean("Vodka", false);
         final boolean rum = preferences.getBoolean("Rum", false);
@@ -125,14 +134,9 @@ public class PantryActivity extends ActionBarActivity {
         final boolean schnapps = preferences.getBoolean("Peach Schnapps", false);
         final boolean Red_Bull = preferences.getBoolean("Red Bull", false);
         final boolean Triple_sec = preferences.getBoolean("Triple Sec", false);
-        final boolean baileys = preferences.getBoolean("Baileys", false);
+        final boolean baileys = preferences.getBoolean("Bailey's", false);
         final boolean jameson = preferences.getBoolean("Jameson", false);
         final boolean vermouth = preferences.getBoolean("Vermouth", false);
-
-        ListView listView = (ListView) findViewById(R.id.listView2);
-        adapt.clear();
-        adapt.notifyDataSetChanged();
-        listView.setAdapter(null);
 
         if(vermouth){
             drinks.add(new Bottles("Vermouth"));
