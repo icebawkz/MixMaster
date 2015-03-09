@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="match_parent" android:background="@drawable/white_wood">
+    android:layout_width="wrap_content" android:layout_height="match_parent" android:background="@drawable/activity_bakground">
 
     <TextView
         android:layout_width="match_parent"
@@ -55,7 +55,6 @@
         android:layout_below="@+id/spinner"
         android:layout_centerHorizontal="true"
         android:textColor="#ff000000"
-        android:background="#46484848"
         android:gravity="center"/>
 
     <ListView

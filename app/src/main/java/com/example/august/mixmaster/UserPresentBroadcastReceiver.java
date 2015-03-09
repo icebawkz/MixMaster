@@ -23,8 +23,6 @@ public class UserPresentBroadcastReceiver extends BroadcastReceiver {
 
     Context mContext;
     public UserPresentBroadcastReceiver(Context mContext){
-        Toast.makeText(mContext, "notification called this", Toast.LENGTH_LONG).show();
-
         this.mContext = mContext;
     }
 
@@ -32,10 +30,9 @@ public class UserPresentBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Toast.makeText(context, "notification called this", Toast.LENGTH_LONG).show();
-       // if(intent.getAction().equals(Intent.ACTION_USER_PRESENT)){
             NotificationManager notificationManager = (NotificationManager)
                     context.getSystemService(Context.NOTIFICATION_SERVICE);
-            Notification notification = new Notification(android.R.drawable.stat_notify_more,
+            Notification notification = new Notification(R.drawable.notification,
                     "It's 5 O'Clock Somewhere!", System.currentTimeMillis());
             Intent notificationIntent = new Intent(context, MainActivity.class);
 
@@ -48,12 +45,6 @@ public class UserPresentBroadcastReceiver extends BroadcastReceiver {
             notification.setLatestEventInfo(context, "MixMaster", "It's 5 O'Clock Somewhere!", Pintent);
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
             notificationManager.notify(0, notification);
-
-
-
-
-
-       // }
 
     }
 }
