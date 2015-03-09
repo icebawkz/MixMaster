@@ -35,6 +35,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Random;
 import java.util.TimeZone;
 
 
@@ -52,6 +53,7 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
     final Context context = this;
+    private ShakeListener aShaker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun", true);
+
 
 
         // Use the Builder class for convenient dialog construction
@@ -86,6 +89,87 @@ public class MainActivity extends ActionBarActivity
            alertDialog.show();
 
        }
+        aShaker = new ShakeListener(this);
+        aShaker.setOnShakeListener(new ShakeListener.OnShakeListener() {
+            public void onShake() {
+
+                Toast toast = Toast.makeText(MainActivity.this, "Shake to Discover Activated\nBe Refreshed", Toast.LENGTH_SHORT);
+                TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+                if( v != null) v.setGravity(Gravity.CENTER);
+                toast.show();
+                if( v != null) v.setGravity(Gravity.CENTER);
+                Random r = new Random();
+                //generates a number between 0 and 13
+                int i1 = r.nextInt(13);
+                final List<Recipes> drinks = new ArrayList<>();
+                switch (i1) {
+                    case 0:
+                        String[] screwdriver = {"Vodka"};
+
+                        drinks.add(new Recipes("Screwdriver", R.drawable.screwdriver, R.drawable.screwdriver_small, getString(R.string.screwdriver_desc), getString(R.string.screwdriver_recipe), screwdriver));
+                    case 1:
+                        String[] fuzzy = {"Peach Schnapps"};
+                        drinks.add(new Recipes("Fuzzy Navel", R.drawable.fuzzy_navel, R.drawable.fuzzy_navel_small, getString(R.string.fuzzynavel_desc), getString(R.string.fuzzynavel_recipe), fuzzy));
+                        break;
+                    case 2:
+                        String[] cooler = {"Vodka", "Triple Sec"};
+                        drinks.add(new Recipes("Cactus Cooler", R.drawable.cactus_cooler, R.drawable.cactus_cooler_small, getString(R.string.cactuscooler_desc), getString(R.string.cactuscooler_recipe), cooler));
+                        break;
+                    case 4:
+                        String[] Rumncoke = {"Rum"};
+                        drinks.add(new Recipes("Rum and Coke", R.drawable.rum, R.drawable.rum_small, getString(R.string.rum_coke_desc), getString(R.string.rum_coke_recipe), Rumncoke));
+                        break;
+                    case 5:
+                        String[] Rumncoke1 = {"Rum"};
+                        drinks.add(new Recipes("Pina Colada", R.drawable.pina, R.drawable.pina_small, getString(R.string.pina_desc), getString(R.string.pina_recipe), Rumncoke1));
+                        break;
+                    case 6:
+                        String[] Rumncoke2 = {"Rum"};
+                        drinks.add(new Recipes("Daiquiri", R.drawable.daiquiri, R.drawable.daiquiri_small, getString(R.string.daiquiri_desc), getString(R.string.daiquiri_recipe), Rumncoke2));
+                        break;
+                    case 7:
+                        String[] Gin = {"Gin"};
+                        drinks.add(new Recipes("Gin and Tonic", R.drawable.gin_tonic, R.drawable.gin_tonic_small, getString(R.string.gin_tonic_desc), getString(R.string.gin_tonic_recipe), Gin));
+                        break;
+                    case 8:
+                        String[] martini = {"Gin", "Vermouth"};
+                        drinks.add(new Recipes("Martini", R.drawable.martini, R.drawable.martini_small, getString(R.string.martini_desc), getString(R.string.martini_recipe), martini));
+                        break;
+                    case 9:
+                        String[] Gin2 = {"Gin"};
+                        drinks.add(new Recipes("Tom Collins", R.drawable.tom_collins, R.drawable.tom_collins_small, getString(R.string.tom_collins_desc), getString(R.string.tom_collins_recipe), Gin2));
+                        break;
+                    case 10:
+                        String[] carbomb = {"Whiskey", "Jameson"};
+                        drinks.add(new Recipes("Irish Car Bomb", R.drawable.irish_car_bomb, R.drawable.irish_car_bomb_small, getString(R.string.irishcarbomb_desc), getString(R.string.irishccarbomb_recipe), carbomb));
+                        break;
+                    case 11:
+                        String[] Whiskey = {"Whiskey"};
+                        drinks.add(new Recipes("Whiskey Sour", R.drawable.whiskey_sour, R.drawable.whiskey_sour_small, getString(R.string.whiskey_sour_desc), getString(R.string.whiskey_sour_recipe), Whiskey));
+                        break;
+                    case 12:
+                        String[] manhattan = {"Whiskey", "Vermouth"};
+                        drinks.add(new Recipes("Manhattan", R.drawable.manhattan, R.drawable.manhattan_small, getString(R.string.manhattan_desc), getString(R.string.manhattan_recipe), manhattan));
+                        break;
+                    default:
+                        String[] Jager = {"Jager"};
+                        drinks.add(new Recipes("Jager Bomb", R.drawable.jager_bomb, R.drawable.jager_bomb_small, getString(R.string.jagerbomb_desc), getString(R.string.jagerbomb_recipe), Jager));
+                        break;
+
+                }
+                final Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                Recipes drink = drinks.get(0);
+                intent.putExtra("name", drink.getName());
+                intent.putExtra("fileName", drink.getIcon());
+                intent.putExtra("about", drink.getDescription());
+                intent.putExtra("how", drink.getHow());
+                intent.putExtra("ingredients", drink.getIngredients());
+
+                startActivity(intent);
+
+
+            }
+        });
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();

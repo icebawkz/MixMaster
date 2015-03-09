@@ -37,7 +37,35 @@ public class MainActivity extends Activity {
                     startActivity(intent);
 
                 }
+                if (prefs.getInt("counter", 0) != 0)
+                {
+                    long time = prefs.getLong("time", System.currentTimeMillis());
+                    int counter = prefs.getInt("counter", 0);
 
+
+                    TextView textView = (TextView) findViewById(R.id.text);
+                    int Weight = prefs.getInt("weight", 0);
+                    float Gender = prefs.getFloat("gender", 0);
+
+                    float alcoholConsumed;
+                    alcoholConsumed = (float)counter*12f*4f*0.06f*1.055f;
+
+                    float constraint;
+                    constraint = (float)Weight*Gender;
+
+                    long currentTime = System.currentTimeMillis();
+                    currentTime -=time;
+                    int hours   = (int) ((currentTime / (1000*60*60)) % 24);
+                    float minutes = (float)((currentTime / (1000*60)) % (12*60));
+                    minutes = Math.abs(minutes);
+                    alcoholConsumed /= constraint;
+                    float decay = hours *0.015f;
+                    alcoholConsumed -= decay;
+                    if (alcoholConsumed < 0)
+                        alcoholConsumed = 0;
+
+                    textView.setText("Your BAC is:\n" + Double.valueOf(new DecimalFormat("#.###").format(alcoholConsumed)) +"\n"+counter+" drinks\n"+minutes+" mins\n");
+                }
 
                 Button button = (Button) findViewById(R.id.button);
                 button.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +73,6 @@ public class MainActivity extends Activity {
                     public void onClick(View v) {
                         long time = prefs.getLong("time", System.currentTimeMillis());
                         int counter = prefs.getInt("counter", 0);
-
                         counter++;
                         prefs.edit().putInt("counter", counter).commit();
                         TextView textView = (TextView) findViewById(R.id.text);
