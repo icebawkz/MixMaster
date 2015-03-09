@@ -99,8 +99,8 @@ public class MainActivity extends ActionBarActivity
                 toast.show();
                 if( v != null) v.setGravity(Gravity.CENTER);
                 Random r = new Random();
-                //generates a number between 0 and 13
-                int i1 = r.nextInt(13);
+                //generates a number between 0 and 16
+                int i1 = r.nextInt(16);
                 final List<Recipes> drinks = new ArrayList<>();
                 switch (i1) {
                     case 0:
@@ -150,6 +150,18 @@ public class MainActivity extends ActionBarActivity
                     case 12:
                         String[] manhattan = {"Whiskey", "Vermouth"};
                         drinks.add(new Recipes("Manhattan", R.drawable.manhattan, R.drawable.manhattan_small, getString(R.string.manhattan_desc), getString(R.string.manhattan_recipe), manhattan));
+                        break;
+                    case 13:
+                        String[] Margarita = {"Tequila"};
+                        drinks.add(new Recipes("Margarita", R.drawable.margarita, R.drawable.margarita_small, getString(R.string.margarita_desc), getString(R.string.margarita_recipe), Margarita));
+                        break;
+                    case 14:
+                        String[] Margarita1 = {"Tequila"};
+                        drinks.add(new Recipes("Horny Bull", R.drawable.horny_bull, R.drawable.horny_bull_small, getString(R.string.horny_bull_desc), getString(R.string.horny_bull_recipe), Margarita1));
+                        break;
+                    case 15:
+                        String[] Margarita2 = {"Tequila"};
+                        drinks.add(new Recipes("Tequila Sunrise", R.drawable.tequila_sunrise, R.drawable.tequila_sunrise_small, getString(R.string.tequila_sunrise_desc), getString(R.string.tequila_sunrise_recipe), Margarita2));
                         break;
                     default:
                         String[] Jager = {"Jager"};
