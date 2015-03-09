@@ -5,7 +5,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="75dp"
+        android:ellipsize="start"
+        android:gravity="center"
         android:text="Bottles"
-        android:textSize="24dp"
-        android:id="@+id/textView5" />
+        android:textSize="30sp"
+        android:id="@+id/textView5"
+        android:background="#2196F3"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 </LinearLayout>

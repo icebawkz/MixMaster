@@ -59,13 +59,24 @@ public class DetailActivity extends ActionBarActivity {
 
             // Find out if they own the ingredients
             final boolean have = preferences.getBoolean(ingredients[0], false);
-            if (have)
-            {
-                items.setText("You have everything you need to make this.");
+            if(ingredients.length > 1) {
+                final boolean have2 = preferences.getBoolean(ingredients[1], false);
+                if (have && have2) {
+                    items.setText("You have everything you need to make this.");
+                } else if (have) {
+                    items.setText("You need to buy " + ingredients[1] + " for this drink.");
+                } else if (have2) {
+                    items.setText("You need to buy " + ingredients[0] + " for this drink.");
+                } else {
+                    items.setText("You need to buy " + ingredients[0] + " and " + ingredients[1] + " for this drink.");
+                }
             }
             else
             {
-                items.setText("You need to buy "+ingredients[0]+" for this drink.");
+                if(have)
+                    items.setText("You have everything you need to make this.");
+                else
+                    items.setText("You need to buy " + ingredients[0] + " for this drink.");
             }
 
             drinkName.setText(name1);

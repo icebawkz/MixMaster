@@ -47,17 +47,23 @@
     <string name="tom_collins_recipe">In a cocktail shaker mix 2 ounces gin, 1 ounce lemon juice and 1 tsp sugar. Shake and pour into cocktail glass, add 3 ounces club soda and garnish with cherry.</string>
 
     <string name="margarita_desc">The margarita is a cocktail consisting of tequila, triple sec and lime or lemon juice, often served with salt on the rim of the glass.</string>
-    <string name="margarita_recipe">Mix 7 parts Tequila, 4 parts Cointreau (orange Liquer), and 3 parts Lime juice.</string>
+    <string name="margarita_recipe">Mix 7 parts Tequila, 4 parts Triple Sec (orange Liquer), and 3 parts Lime juice.</string>
 
 
 
 
     <string-array name="pantry_options">
+        <item>Reb Bull</item>
+        <item>Triple Sec</item>
+        <item>Bailey\'s</item>
+        <item>Jameson</item>
+        <item>Vermouth</item>
+        <item>Peach Schnapps</item>
         <item>Gin</item>
         <item>Vodka</item>
         <item>Rum</item>
         <item>Whiskey</item>
         <item>Tequila</item>
-        <item>Jager</item>
+        <item>Jagermeister</item>
     </string-array>
 </resources>

@@ -122,10 +122,36 @@ public class PantryActivity extends ActionBarActivity {
         final boolean whiskey = preferences.getBoolean("Whiskey", false);
         final boolean tequila = preferences.getBoolean("Tequila", false);
         final boolean jagger = preferences.getBoolean("Jager", false);
+        final boolean schnapps = preferences.getBoolean("Peach Schnapps", false);
+        final boolean Red_Bull = preferences.getBoolean("Red Bull", false);
+        final boolean Triple_sec = preferences.getBoolean("Triple Sec", false);
+        final boolean baileys = preferences.getBoolean("Baileys", false);
+        final boolean jameson = preferences.getBoolean("Jameson", false);
+        final boolean vermouth = preferences.getBoolean("Vermouth", false);
+
         ListView listView = (ListView) findViewById(R.id.listView2);
         adapt.clear();
         adapt.notifyDataSetChanged();
         listView.setAdapter(null);
+
+        if(vermouth){
+            drinks.add(new Bottles("Vermouth"));
+        }
+        if(jameson){
+            drinks.add(new Bottles("Jameson"));
+        }
+        if(baileys){
+            drinks.add(new Bottles("Bailey's"));
+        }
+        if(Triple_sec){
+            drinks.add(new Bottles("Triple Sec"));
+        }
+        if(Red_Bull){
+            drinks.add(new Bottles("Red Bull"));
+        }
+        if (schnapps) {
+            drinks.add(new Bottles("Peach Schnapps"));
+        }
         if (gin) {
             drinks.add(new Bottles("Gin"));
         }

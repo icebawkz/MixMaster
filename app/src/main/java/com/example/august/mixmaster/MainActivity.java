@@ -129,7 +129,7 @@ public class MainActivity extends ActionBarActivity
                 textView.setText("Common Vodka Recipes");
                 String[] screwdriver = {"Vodka"};
                 String[] fuzzy = {"Peach Schnapps"};
-                String[] cooler = {"Vodka, Triple Sec"};
+                String[] cooler = {"Vodka", "Triple Sec"};
 
                 drinks.add(new Recipes( "Screwdriver",  R.drawable.screwdriver, R.drawable.screwdriver_small, getString(R.string.screwdriver_desc), getString(R.string.screwdriver_recipe),screwdriver));
                 drinks.add(new Recipes( "Fuzzy Navel",  R.drawable.fuzzy_navel, R.drawable.fuzzy_navel_small, getString(R.string.fuzzynavel_desc), getString(R.string.fuzzynavel_recipe), fuzzy));

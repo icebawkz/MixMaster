@@ -29,7 +29,6 @@ public class UserPresentBroadcastReceiver extends BroadcastReceiver {
     @SuppressWarnings("deprecated")
     @Override
     public void onReceive(Context context, Intent intent) {
-        Toast.makeText(context, "notification called this", Toast.LENGTH_LONG).show();
             NotificationManager notificationManager = (NotificationManager)
                     context.getSystemService(Context.NOTIFICATION_SERVICE);
             Notification notification = new Notification(R.drawable.notification,
