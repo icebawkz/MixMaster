@@ -5,7 +5,7 @@
     tools:context=".MainActivity" tools:deviceIds="wear_square">
 
     <TextView android:id="@+id/text" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="your BAC is:"
+        android:layout_height="wrap_content" android:text="0.08 and above are\nconsidered impaired.\nhold '+' to reset"
         android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />

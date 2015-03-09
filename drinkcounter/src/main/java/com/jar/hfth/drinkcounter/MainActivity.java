@@ -66,6 +66,8 @@ public class MainActivity extends Activity {
                         alcoholConsumed /= constraint;
                         float decay = hours *0.015f;
                         alcoholConsumed -= decay;
+                        if (alcoholConsumed < 0)
+                            alcoholConsumed = 0;
                    //     alcoholConsumed /=5f;
 
                         textView.setText("Your BAC is:\n" + Double.valueOf(new DecimalFormat("#.###").format(alcoholConsumed)) +"\n"+counter+" drinks\n"+minutes+" mins\n");

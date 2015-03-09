@@ -4,7 +4,7 @@
     android:layout_height="match_parent" tools:context=".MainActivity" tools:deviceIds="wear_round">
 
     <TextView android:id="@+id/text" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Your BAC is: "
+        android:layout_height="wrap_content" android:text="0.08 and above are\nconsidered impaired.\nhold '+' to reset"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"

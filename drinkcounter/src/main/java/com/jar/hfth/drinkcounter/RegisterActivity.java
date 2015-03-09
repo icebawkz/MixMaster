@@ -49,6 +49,7 @@ public class RegisterActivity extends Activity {
                             factor = 0.66f;
                         prefs.edit().putInt("weight", Weight).commit();
                         prefs.edit().putFloat("gender", factor).commit();
+                        prefs.edit().putLong("time",System.currentTimeMillis()).commit();
                         finish();
                     }
                 });
