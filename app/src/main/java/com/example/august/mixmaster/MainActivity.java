@@ -93,7 +93,7 @@ public class MainActivity extends ActionBarActivity
         aShaker.setOnShakeListener(new ShakeListener.OnShakeListener() {
             public void onShake() {
 
-                Toast toast = Toast.makeText(MainActivity.this, "Shake to Discover Activated\nBe Refreshed!!!", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(MainActivity.this, "Shake to Discover Activated\nBe Refreshed", Toast.LENGTH_SHORT);
                 TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
                 if( v != null) v.setGravity(Gravity.CENTER);
                 toast.show();
